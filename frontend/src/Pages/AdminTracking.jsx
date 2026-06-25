@@ -46,7 +46,7 @@ const AdminTracking = () => {
   }
 
   const fetchTrackings = async () => {
-    const res = await fetch("import.meta.env.VITE_API_URL/tracking");
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/tracking`);
     const data = await res.json();
     setTrackings(data);
   };
@@ -149,8 +149,8 @@ const AdminTracking = () => {
     };
 
     const url = editingId
-      ? `import.meta.env.VITE_API_URL/tracking/${editingId}`
-      : "import.meta.env.VITE_API_URL/tracking";
+      ? `${import.meta.env.VITE_API_URL}/tracking/${editingId}`
+      : `${import.meta.env.VITE_API_URL}/tracking`;
 
     const method = editingId ? "PUT" : "POST";
 
@@ -185,7 +185,7 @@ const AdminTracking = () => {
   const handleDelete = async (id) => {
     if (!confirm("Delete this tracking record?")) return;
 
-    const res = await fetch(`import.meta.env.VITE_API_URL/tracking/${id}`, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/tracking/${id}`, {
       method: "DELETE",
     });
 
