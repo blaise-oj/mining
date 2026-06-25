@@ -1,4 +1,4 @@
-import PageBanner from "../../components/PageBanner";
+import PageBanner from "../../Components/PageBanner";
 
 import leader1 from "../../assets/leader1.jpg";
 import leader2 from "../../assets/leader2.jpg";
