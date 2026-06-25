@@ -23,7 +23,7 @@ const Tracking = () => {
 
         try {
             const res = await fetch(
-                `http://localhost:4000/api/tracking/${trackingNumber.trim().toUpperCase()}`
+                `import.meta.env.VITE_API_URL/tracking/${trackingNumber.trim().toUpperCase()}`
             );
 
             const data = await res.json();
