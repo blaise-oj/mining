@@ -13,24 +13,39 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.json({
-    message: "Mining tracking backend is running",
-  });
+    res.json({
+        message: "Mining tracking backend is running",
+    });
 });
 
 app.use("/api/tracking", trackingRoutes);
 
 const PORT = process.env.PORT || 4000;
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("MongoDB connected successfully");
+const mongoURI =
+    process.env.DB_TYPE === "atlas"
+        ? process.env.ATLAS_MONGO_URI
+        : process.env.LOCAL_MONGO_URI;
+if (!mongoURI) {
+    console.error("MongoDB URI is missing.");
+    process.exit(1);
+}
 
-    app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+mongoose
+    .connect(mongoURI)
+    .then(() => {
+        console.log(
+            process.env.DB_TYPE === "atlas"
+                ? "MongoDB Atlas connected successfully"
+                : "Local MongoDB connected successfully"
+        );
+        console.log("Connected database:", mongoose.connection.name);
+        console.log("Connected host:", mongoose.connection.host);
+
+        app.listen(PORT, () => {
+            console.log(`Server running on http://localhost:${PORT}`);
+        });
+    })
+    .catch((error) => {
+        console.error("MongoDB connection failed:", error.message);
     });
-  })
-  .catch((error) => {
-    console.error("MongoDB connection failed:", error.message);
-  });
