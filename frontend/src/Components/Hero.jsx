@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import hero1 from "../assets/hero1.jpg";
@@ -11,18 +12,21 @@ const slides = [
     smallTitle: "Welcome to",
     title: "State Department for Mining",
     subtitle: "Promote sustainable development of the extractives sector",
+    path: "/departments/mining",
   },
   {
     image: hero2,
     smallTitle: "Explore",
     title: "Blue Economy Services",
     subtitle: "Supporting fisheries, maritime growth and coastal development",
+    path: "/information/blue-economy-fisheries",
   },
   {
     image: hero3,
     smallTitle: "Track Your",
     title: "Agency Application Status",
     subtitle: "Use your tracking number to follow your request progress",
+    path: "/tracking",
   },
 ];
 
@@ -79,9 +83,12 @@ const Hero = () => {
                 {slide.subtitle}
               </p>
 
-              <button className="mt-5 bg-[#ef2b0c] hover:bg-[#c92106] text-white font-bold px-7 py-3 rounded-sm transition">
+              <Link
+                to={slide.path}
+                className="inline-block mt-5 bg-[#ef2b0c] hover:bg-[#c92106] text-white font-bold px-7 py-3 rounded-sm transition"
+              >
                 READMORE
-              </button>
+              </Link>
             </div>
           </div>
         </div>

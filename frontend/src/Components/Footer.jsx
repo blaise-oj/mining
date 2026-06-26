@@ -23,9 +23,7 @@ const Footer = () => {
               <MapPin size={18} /> P.O. Box 30009, 00100, Nairobi, Kenya
             </p>
 
-            <p className="flex gap-2 border-b border-white/10 pb-4">
-              <Phone size={18} /> Tel: +254 106 46363
-            </p>
+
 
             <p className="flex gap-2">
               <Mail size={18} /> info@ministryofmining.co.ke
@@ -38,15 +36,59 @@ const Footer = () => {
           <div className="w-12 h-[2px] bg-[#8b2b1d] mt-5 mb-8"></div>
 
           <ol className="list-decimal list-inside space-y-2 text-sm leading-7">
-            <li><Link to="/links/presidency">The Presidency</Link></li>
-            <li><Link to="/links/national-mining-corporation">National Mining Corporation</Link></li>
-            <li><Link to="/links/mining-cadastre">Mining Cadastre Portal</Link></li>
-            <li><Link to="/links/national-geodata-centre">National GeoData Centre</Link></li>
-            <li><Link to="/links/nema">National Environment Management Authority</Link></li>
-            <li><Link to="/links/amgc">African Minerals Geosciences Centre (AMGC)</Link></li>
-            <li><Link to="/departments/mining">State Department for Mining</Link></li>
-            <li><Link to="/departments/maritime-affairs">State Department for Maritime Affairs</Link></li>
-            <li><Link to="/departments/blue-economy">State Department for Blue Economy</Link></li>
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                The Presidency
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                National Mining Corporation
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                Mining Cadastre Portal
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                National GeoData Centre
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                National Environment Management Authority
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                African Minerals Geosciences Centre (AMGC)
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                State Department for Mining
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                State Department for Maritime Affairs
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                State Department for Blue Economy
+              </a>
+            </li>
           </ol>
         </div>
 
@@ -55,11 +97,35 @@ const Footer = () => {
           <div className="w-12 h-[2px] bg-[#8b2b1d] mt-5 mb-8"></div>
 
           <ol className="list-decimal list-inside space-y-3 text-sm leading-7">
-            <li><Link to="/sagas/fish-levy-trust-fund">Fish Levy Trust Fund</Link></li>
-            <li><Link to="/sagas/kenya-fisheries-service">The Kenya Fisheries Service</Link></li>
-            <li><Link to="/sagas/kmfri">The Kenya Marine and Fisheries Research Institute</Link></li>
-            <li><Link to="/sagas/kenya-fishing-industries">Kenya Fishing Industries Corporation.</Link></li>
-            <li><Link to="/sagas/fish-marketing-authority">The Fish Marketing Authority</Link></li>
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                Fish Levy Trust Fund
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                The Kenya Fisheries Service
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                The Kenya Marine and Fisheries Research Institute
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                Kenya Fishing Industries Corporation
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mining.go.ke" target="_blank" rel="noopener noreferrer">
+                The Fish Marketing Authority
+              </a>
+            </li>
           </ol>
         </div>
 
@@ -70,15 +136,28 @@ const Footer = () => {
           <div className="bg-white text-black w-[250px] rounded-t-xl overflow-hidden">
             <img src={facebookImg} alt="Facebook preview" className="h-[125px] w-full object-cover" />
 
-            <div className="p-4 flex gap-3">
-              <img src={arms} alt="arms" className="w-14 h-14 object-contain" />
-              <div>
-                <h4 className="text-xl font-bold leading-6">
-                  Ministry of Mining, Blue Economy and Maritime Affairs
-                </h4>
-                <p className="text-sm mt-1">2.5K followers</p>
+            <a
+              href="https://www.facebook.com/profile.php?id=100078840349796"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:bg-gray-100 transition"
+            >
+              <div className="p-4 flex gap-3">
+                <img
+                  src={arms}
+                  alt="arms"
+                  className="w-14 h-14 object-contain"
+                />
+
+                <div>
+                  <h4 className="text-xl font-bold leading-6">
+                    Ministry of Mining, Blue Economy and Maritime Affairs
+                  </h4>
+
+                  <p className="text-sm mt-1">2.5K followers</p>
+                </div>
               </div>
-            </div>
+            </a>
 
             <p className="px-4 pb-4 text-sm">
               Ministry of Mining, Blue Economy and Maritime Affairs
@@ -92,15 +171,32 @@ const Footer = () => {
           <p>© Copyright 2026 | Ministry Of Mining | All Rights Reserved.</p>
 
           <div className="flex gap-3">
-            <span className="w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center">
+            <a
+              href="https://www.facebook.com/profile.php?id=100078840349796"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center hover:opacity-80 transition"
+            >
               <FaFacebookF />
-            </span>
-            <span className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+            </a>
+
+            <a
+              href="https://twitter.com/Petro_MiningKE?t=MlZIBD03M0c_8yHdcwXKjw&s=08"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center hover:opacity-80 transition"
+            >
               <FaTwitter />
-            </span>
-            <span className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center">
+            </a>
+
+            <a
+              href="https://www.ministryofmines.co.ke/mining-institutions.html#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center hover:opacity-80 transition"
+            >
               <FaGooglePlusG />
-            </span>
+            </a>
           </div>
         </div>
       </div>

@@ -73,13 +73,7 @@ const Tracking = () => {
                 <div className="max-w-[1270px] mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
                     <img src={arms} alt="logo" className="h-16 object-contain" />
 
-                    <div className="flex items-center gap-4">
-                        <Phone className="text-red-500" size={36} />
-                        <div>
-                            <h3 className="font-bold text-[#08345c]">Mobile No.</h3>
-                            <p>+254 106 463631</p>
-                        </div>
-                    </div>
+                   
 
                     <div className="flex items-center gap-4">
                         <Mail className="text-red-500" size={36} />

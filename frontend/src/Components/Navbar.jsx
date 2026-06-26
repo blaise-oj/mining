@@ -133,14 +133,17 @@ const Navbar = () => {
         {
             name: "Departments",
             dropdown: [
-                { name: "State Department of Mining", path: "/departments/mining" },
+                {
+                    name: "State Department of Mining",
+                    url: "https://www.mining.go.ke",
+                },
                 {
                     name: "State Department of Blue Economy",
-                    path: "/departments/blue-economy",
+                    url: "https://www.mining.go.ke",
                 },
                 {
                     name: "State Department of Maritime Affairs",
-                    path: "/departments/maritime-affairs",
+                    url: "https://www.mining.go.ke",
                 },
             ],
         },
@@ -197,17 +200,33 @@ const Navbar = () => {
             <div className="bg-white h-14 flex items-center justify-center border-b">
                 <div className="w-full max-w-[1170px] flex items-center justify-between px-4">
                     <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-white text-xs">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100078840349796"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-white text-xs hover:opacity-80 transition"
+                        >
                             <FaFacebookF />
-                        </div>
+                        </a>
 
-                        <div className="w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs">
+                        <a
+                            href="https://twitter.com/Petro_MiningKE?t=MlZIBD03M0c_8yHdcwXKjw&s=08"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs hover:opacity-80 transition"
+                        >
                             <FaTwitter />
-                        </div>
+                        </a>
 
-                        <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-white text-xs">
+                        <a
+                            href="https://www.ministryofmines.co.ke/mining-institutions.html#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-white text-xs hover:opacity-80 transition"
+                            title="Ministry Website"
+                        >
                             <BsChatDotsFill />
-                        </div>
+                        </a>
 
                         <select className="border border-gray-300 px-2 py-1.5 text-sm outline-none max-w-[135px]">
                             <option>Select Language</option>
@@ -217,7 +236,6 @@ const Navbar = () => {
                             <option>Swahili</option>
                         </select>
                     </div>
-
                     <Search className="cursor-pointer text-black" size={20} />
                 </div>
 
@@ -330,15 +348,27 @@ const Navbar = () => {
 
                                 {item.dropdown && (
                                     <div className="absolute left-0 top-full hidden group-hover:block bg-white shadow-md rounded-sm w-[280px] py-3 z-[99999]">
-                                        {item.dropdown.map((link) => (
-                                            <Link
-                                                key={link.name}
-                                                to={link.path}
-                                                className="block px-5 py-2.5 text-sm font-normal text-[#d4a900] hover:text-black hover:bg-gray-50"
-                                            >
-                                                {link.name}
-                                            </Link>
-                                        ))}
+                                        {item.dropdown.map((link) =>
+                                            link.url ? (
+                                                <a
+                                                    key={link.name}
+                                                    href={link.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="block px-5 py-2.5 text-sm font-normal text-[#d4a900] hover:text-black hover:bg-gray-50"
+                                                >
+                                                    {link.name}
+                                                </a>
+                                            ) : (
+                                                <Link
+                                                    key={link.name}
+                                                    to={link.path}
+                                                    className="block px-5 py-2.5 text-sm font-normal text-[#d4a900] hover:text-black hover:bg-gray-50"
+                                                >
+                                                    {link.name}
+                                                </Link>
+                                            )
+                                        )}
                                     </div>
                                 )}
 

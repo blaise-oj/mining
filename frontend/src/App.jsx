@@ -8,9 +8,11 @@ import VisionMission from "./Pages/About/VisionMission";
 import MandateCoreValues from "./Pages/About/MandateCoreValues";
 import Leadership from "./Pages/About/Leadership";
 
+
 import BlueEconomyInformation from "./Pages/Information/BlueEconomyInformation";
 import MiningInformation from "./Pages/Information/MiningInformation";
 import MineralsLicensing from "./Pages/Services/MineralsLicensing";
+import Functions from "./Pages/About/Functions";
 
 import BlueEconomyProjects from "./Pages/Projects/BlueEconomyProjects";
 import MiningProjects from "./Pages/Projects/MiningProjects";
@@ -21,6 +23,7 @@ import Speeches from "./Pages/Media/Speeches";
 import GeneralDocuments from "./Pages/Media/GeneralDocuments";
 import LegalDocuments from "./Pages/Media/LegalDocuments";
 import Reports from "./Pages/Media/Reports";
+import NewsDetail from "./Pages/Media/NewsDetail";
 
 import FAQs from "./Pages/FAQs";
 
@@ -57,6 +60,7 @@ function App() {
           path="/About/leadership"
           element={<Leadership />}
         />
+        <Route path="/about/functions" element={<Functions />} />
 
         <Route
           path="/Information/blue-economy-fisheries"
@@ -89,6 +93,8 @@ function App() {
         <Route path="/media/general-documents" element={<GeneralDocuments />} />
         <Route path="/media/legal-documents" element={<LegalDocuments />} />
         <Route path="/media/reports" element={<Reports />} />
+        <Route path="/media/news-events/:slug" element={<NewsDetail />} />
+        <Route path="/media/press-releases/:slug" element={<NewsDetail />} />
 
         <Route path="/faqs" element={<FAQs />} />
 

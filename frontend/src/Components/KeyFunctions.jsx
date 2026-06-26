@@ -10,19 +10,19 @@ const functions = [
     title: "Mining Function",
     text: "This function is charged under section 17(1)(a) of the Mining Act, 2016, to among others promote",
     image: miningImg,
-    path: "/functions/mining-function",
+    path: "/about/functions",
   },
   {
     title: "Blue Economy and Fisheries Function",
     text: "The state Department comprise of:",
     image: blueImg,
-    path: "/functions/blue-economy-fisheries",
+    path: "/about/functions",
   },
   {
     title: "Maritime Affairs Function",
     text: "Formulation of shipping and maritime policies and legislation so as to ensure: Safety of life and",
     image: maritimeImg,
-    path: "/functions/maritime-affairs",
+    path: "/about/functions",
   },
 ];
 
