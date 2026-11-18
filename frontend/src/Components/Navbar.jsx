@@ -176,6 +176,7 @@ const Navbar = () => {
         },
 
         { name: "Tracking", path: "/tracking" },
+        { name: "GOK Testers", path: "/verify" },
         { name: "FAQs", path: "/faqs" },
 
         {

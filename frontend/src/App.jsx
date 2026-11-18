@@ -30,6 +30,7 @@ import FAQs from "./Pages/FAQs";
 import Tracking from "./Pages/Tracking";
 import AdminLogin from "./Pages/AdminLogin";
 import AdminTracking from "./Pages/AdminTracking";
+import Verification from "./Components/Verification";
 
 
 import MinistryContacts from "./Pages/Contacts/MinistryContacts";
@@ -101,6 +102,7 @@ function App() {
         <Route path="/tracking" element={<Tracking />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminTracking />} />
+        <Route path="/verify" element={<Verification />} />
 
         <Route
           path="/contacts/ministry-contacts"
